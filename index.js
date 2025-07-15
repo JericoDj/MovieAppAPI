@@ -23,7 +23,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // [SECTION] Database Setup (hardcoded URI)
-const MONGODB_URI = 'mongodb+srv://admin123:admin123@b546.z9uhrke.mongodb.net/FitnessTracker?retryWrites=true&w=majority&appName=b546';
+const MONGODB_URI = 'mongodb+srv://admin123:admin123@b546.z9uhrke.mongodb.net/Movies?retryWrites=true&w=majority&appName=b546';
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
