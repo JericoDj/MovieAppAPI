@@ -69,7 +69,11 @@ module.exports.profile = async (req, res) => {
             user: {
                 _id: user._id,
                 email: user.email,
-                __v: user.__v
+                __v: user.__v,
+                isAdmin: user.isAdmin,
+                firstName: user.firstName,
+                lastName: user.lastName,
+                mobileNo: user.mobileNo
             }
         });
     } catch (error) {
