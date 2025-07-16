@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 // [SECTION] Routes
-const userRoutes = require('./routes/user.js');
-const movieRoutes = require('./routes/movie.js');
-const commentRoutes = require('./routes/comment.js');
+const userRoutes = require('./routes/user');
+const movieRoutes = require('./routes/movie');
+const commentRoutes = require('./routes/comment');
 
 // [SECTION] Server setup
 const app = express();
@@ -36,6 +36,10 @@ app.use('/users', userRoutes);
 app.use('/movies', movieRoutes);
 app.use('/movies', commentRoutes);
 
+// Optional: Fallback route
+app.all('*', (req, res) => {
+    res.status(404).json({ message: 'Route not found' });
+});
 
 // [SECTION] Server Listener
 if (require.main === module) {

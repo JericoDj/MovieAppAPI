@@ -1,7 +1,7 @@
 const express = require('express');
-const userController = require('../controllers/user.js');
+const userController = require('../controllers/user');
 
-const { verify } = require("../auth.js");
+const { verify } = require("../auth");
 
 //[SECTION] Routing Component
 const router = express.Router();

@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const User = require('./model/User');
+const User = require('./models/User');
 
 // [SECTION] Token Creation
 module.exports.createAccessToken = (user) => {

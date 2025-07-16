@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const User = require('../model/User');
+const User = require('../models/User');
 const auth = require('../auth');
 
 const { errorHandler } = auth;
@@ -69,11 +69,12 @@ module.exports.profile = async (req, res) => {
             user: {
                 _id: user._id,
                 email: user.email,
-                __v: user.__v,
                 isAdmin: user.isAdmin,
                 firstName: user.firstName,
                 lastName: user.lastName,
-                mobileNo: user.mobileNo
+                mobileNo: user.mobileNo,
+              
+                __v: user.__v
             }
         });
     } catch (error) {

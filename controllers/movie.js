@@ -1,4 +1,4 @@
-const Movie = require('../model/Movie');
+const Movie = require('../models/Movie');
 const { errorHandler } = require('../auth');
 
 // [ADMIN] Create Movie
