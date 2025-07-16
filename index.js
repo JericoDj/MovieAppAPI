@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Allow specific origins (adjust if needed)
 const corsOptions = {
-    origin: ['http://localhost:3000', 'http://localhost:4000', 'movie-app-client-a8qxb3byo-jericos-projects-f568a5b3.vercel.app', 'movie-app-client-alpha-ten.vercel.app' ],
+    origin: ['http://localhost:3000', 'http://localhost:4000', 'movie-app-client-a8qxb3byo-jericos-projects-f568a5b3.vercel.app', 'movie-app-client-alpha-ten.vercel.app', 'https://movie-app-client-alpha-ten.vercel.app' ],
     credentials: true,
     optionsSuccessStatus: 200
 };
